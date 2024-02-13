@@ -10,7 +10,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ArtGrid",
+  title: "FigPro",
   description:
     "An app that used Fabric.js and Liveblocks for real-time collaboration",
 };

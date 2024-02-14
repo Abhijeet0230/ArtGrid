@@ -33,6 +33,7 @@ export const CommentsOverlay = () => {
   return (
     <div>
       {threads
+        //@ts-ignore
         .filter((thread) => !thread.metadata.resolved)
         .map((thread) => (
           <OverlayThread
@@ -66,6 +67,7 @@ const OverlayThread = ({ thread, maxZIndex }: OverlayThreadProps) => {
 
   // If other thread(s) above, increase z-index on last element updated
   const handleIncreaseZIndex = useCallback(() => {
+    //@ts-ignore
     if (maxZIndex === thread.metadata.zIndex) {
       return;
     }
@@ -89,6 +91,7 @@ const OverlayThread = ({ thread, maxZIndex }: OverlayThreadProps) => {
       id={`thread-${thread.id}`}
       className="absolute left-0 top-0 flex gap-5"
       style={{
+        //@ts-ignore
         transform: `translate(${thread.metadata.x}px, ${thread.metadata.y}px)`,
       }}
     >
